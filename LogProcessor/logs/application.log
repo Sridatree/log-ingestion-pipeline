@@ -1,0 +1,477 @@
+2025-11-05 00:36:48 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-05 00:36:48 INFO  [main] c.a.L.LogProcessorApplication - Starting LogProcessorApplication using Java 24.0.1 with PID 50436 (C:\Users\91700\Downloads\LogProcessor\LogProcessor\target\classes started by 91700 in C:\Users\91700\Downloads\LogProcessor)
+2025-11-05 00:36:48 INFO  [main] c.a.L.LogProcessorApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-05 00:37:00 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-05 00:37:00 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-05 00:37:00 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-05 00:37:00 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-05 00:37:01 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-05 00:37:01 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 12436 ms
+2025-11-05 00:37:04 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-05 00:37:04 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-05 00:37:04 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2025-11-05 00:37:04 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#7eee6c13:0/SimpleConnection@775a5a67 [delegate=amqp://guest@127.0.0.1:5672/, localPort=52863]
+2025-11-05 00:37:04 INFO  [main] c.a.L.LogProcessorApplication - Started LogProcessorApplication in 17.495 seconds (process running for 18.232)
+2025-11-05 00:37:29 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-05 00:37:29 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-05 00:37:29 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-11-05 00:37:32 INFO  [http-nio-8080-exec-5] c.a.L.c.LogProcessorController - Received ingest request with 200 records
+2025-11-05 00:37:32 INFO  [http-nio-8080-exec-2] c.a.L.c.LogProcessorController - Received ingest request with 200 records
+2025-11-05 00:37:32 INFO  [http-nio-8080-exec-4] c.a.L.c.LogProcessorController - Received ingest request with 200 records
+2025-11-05 00:37:32 INFO  [http-nio-8080-exec-1] c.a.L.c.LogProcessorController - Received ingest request with 200 records
+2025-11-05 00:37:32 INFO  [http-nio-8080-exec-3] c.a.L.c.LogProcessorController - Received ingest request with 196 records
+2025-11-05 00:37:33 INFO  [http-nio-8080-exec-1] c.a.L.service.IngestService - Ingested 200 out of 200 records to raw queue (Total ingested: 200)
+2025-11-05 00:37:33 INFO  [http-nio-8080-exec-5] c.a.L.service.IngestService - Ingested 200 out of 200 records to raw queue (Total ingested: 400)
+2025-11-05 00:37:33 INFO  [http-nio-8080-exec-2] c.a.L.service.IngestService - Ingested 200 out of 200 records to raw queue (Total ingested: 600)
+2025-11-05 00:37:33 INFO  [http-nio-8080-exec-4] c.a.L.service.IngestService - Ingested 200 out of 200 records to raw queue (Total ingested: 996)
+2025-11-05 00:37:33 INFO  [http-nio-8080-exec-3] c.a.L.service.IngestService - Ingested 196 out of 196 records to raw queue (Total ingested: 796)
+2025-11-05 00:37:37 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:37:37 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:37:37 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:37:37 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:37:37 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 20)
+2025-11-05 00:37:37 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 465 ms, Batches processed: 1
+2025-11-05 00:37:37 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 465 ms
+2025-11-05 00:37:37 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 1 batches processed, 20 records sent, TOTAL TIME: 465 ms (0.465 sec)
+2025-11-05 00:37:37 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 466 ms to send records to analytics service
+2025-11-05 00:37:38 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:37:38 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:37:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:37:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:37:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 40)
+2025-11-05 00:37:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 3800 ms, Batches processed: 2
+2025-11-05 00:37:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 3335 ms
+2025-11-05 00:37:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 2 batches processed, 40 records sent, TOTAL TIME: 3800 ms (3.8 sec)
+2025-11-05 00:37:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 3335 ms to send records to analytics service
+2025-11-05 00:37:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:37:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:37:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:37:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:37:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 60)
+2025-11-05 00:37:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 13819 ms, Batches processed: 3
+2025-11-05 00:37:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10019 ms
+2025-11-05 00:37:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 3 batches processed, 60 records sent, TOTAL TIME: 13819 ms (13.819 sec)
+2025-11-05 00:37:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10019 ms to send records to analytics service
+2025-11-05 00:37:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:37:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:38:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:38:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:38:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 80)
+2025-11-05 00:38:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 23812 ms, Batches processed: 4
+2025-11-05 00:38:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9993 ms
+2025-11-05 00:38:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 4 batches processed, 80 records sent, TOTAL TIME: 23812 ms (23.812 sec)
+2025-11-05 00:38:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9993 ms to send records to analytics service
+2025-11-05 00:38:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:38:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:38:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:38:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:38:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 100)
+2025-11-05 00:38:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 33818 ms, Batches processed: 5
+2025-11-05 00:38:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10006 ms
+2025-11-05 00:38:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 5 batches processed, 100 records sent, TOTAL TIME: 33818 ms (33.818 sec)
+2025-11-05 00:38:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10006 ms to send records to analytics service
+2025-11-05 00:38:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:38:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:38:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:38:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:38:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 120)
+2025-11-05 00:38:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 43876 ms, Batches processed: 6
+2025-11-05 00:38:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10058 ms
+2025-11-05 00:38:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 6 batches processed, 120 records sent, TOTAL TIME: 43876 ms (43.876 sec)
+2025-11-05 00:38:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10058 ms to send records to analytics service
+2025-11-05 00:38:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:38:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:38:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:38:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:38:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 140)
+2025-11-05 00:38:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 53815 ms, Batches processed: 7
+2025-11-05 00:38:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9939 ms
+2025-11-05 00:38:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 7 batches processed, 140 records sent, TOTAL TIME: 53815 ms (53.815 sec)
+2025-11-05 00:38:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9939 ms to send records to analytics service
+2025-11-05 00:38:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:38:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:38:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:38:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:38:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 160)
+2025-11-05 00:38:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 63827 ms, Batches processed: 8
+2025-11-05 00:38:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10012 ms
+2025-11-05 00:38:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 8 batches processed, 160 records sent, TOTAL TIME: 63827 ms (63.827 sec)
+2025-11-05 00:38:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10012 ms to send records to analytics service
+2025-11-05 00:38:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:38:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:38:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:38:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:38:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 180)
+2025-11-05 00:38:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 73807 ms, Batches processed: 9
+2025-11-05 00:38:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9980 ms
+2025-11-05 00:38:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 9 batches processed, 180 records sent, TOTAL TIME: 73807 ms (73.807 sec)
+2025-11-05 00:38:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9981 ms to send records to analytics service
+2025-11-05 00:38:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:38:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:39:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:39:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:39:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 200)
+2025-11-05 00:39:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 83900 ms, Batches processed: 10
+2025-11-05 00:39:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10093 ms
+2025-11-05 00:39:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 10 batches processed, 200 records sent, TOTAL TIME: 83900 ms (83.9 sec)
+2025-11-05 00:39:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10094 ms to send records to analytics service
+2025-11-05 00:39:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:39:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:39:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:39:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:39:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 220)
+2025-11-05 00:39:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 93782 ms, Batches processed: 11
+2025-11-05 00:39:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9882 ms
+2025-11-05 00:39:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 11 batches processed, 220 records sent, TOTAL TIME: 93782 ms (93.782 sec)
+2025-11-05 00:39:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9883 ms to send records to analytics service
+2025-11-05 00:39:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:39:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:39:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:39:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:39:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 240)
+2025-11-05 00:39:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 103786 ms, Batches processed: 12
+2025-11-05 00:39:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10004 ms
+2025-11-05 00:39:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 12 batches processed, 240 records sent, TOTAL TIME: 103786 ms (103.786 sec)
+2025-11-05 00:39:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10004 ms to send records to analytics service
+2025-11-05 00:39:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:39:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:39:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:39:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:39:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 260)
+2025-11-05 00:39:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 113830 ms, Batches processed: 13
+2025-11-05 00:39:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10044 ms
+2025-11-05 00:39:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 13 batches processed, 260 records sent, TOTAL TIME: 113830 ms (113.83 sec)
+2025-11-05 00:39:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10044 ms to send records to analytics service
+2025-11-05 00:39:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:39:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:39:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:39:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:39:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 280)
+2025-11-05 00:39:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 124085 ms, Batches processed: 14
+2025-11-05 00:39:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10255 ms
+2025-11-05 00:39:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 14 batches processed, 280 records sent, TOTAL TIME: 124085 ms (124.085 sec)
+2025-11-05 00:39:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10255 ms to send records to analytics service
+2025-11-05 00:39:42 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:39:42 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:39:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:39:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:39:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 300)
+2025-11-05 00:39:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 133498 ms, Batches processed: 15
+2025-11-05 00:39:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9413 ms
+2025-11-05 00:39:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 15 batches processed, 300 records sent, TOTAL TIME: 133498 ms (133.498 sec)
+2025-11-05 00:39:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9413 ms to send records to analytics service
+2025-11-05 00:39:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:39:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:40:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:40:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:40:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 320)
+2025-11-05 00:40:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 143550 ms, Batches processed: 16
+2025-11-05 00:40:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10052 ms
+2025-11-05 00:40:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 16 batches processed, 320 records sent, TOTAL TIME: 143550 ms (143.55 sec)
+2025-11-05 00:40:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10052 ms to send records to analytics service
+2025-11-05 00:40:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:40:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:40:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:40:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:40:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 340)
+2025-11-05 00:40:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 153487 ms, Batches processed: 17
+2025-11-05 00:40:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9937 ms
+2025-11-05 00:40:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 17 batches processed, 340 records sent, TOTAL TIME: 153487 ms (153.487 sec)
+2025-11-05 00:40:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9937 ms to send records to analytics service
+2025-11-05 00:40:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:40:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:40:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:40:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:40:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 360)
+2025-11-05 00:40:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 163485 ms, Batches processed: 18
+2025-11-05 00:40:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9998 ms
+2025-11-05 00:40:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 18 batches processed, 360 records sent, TOTAL TIME: 163485 ms (163.485 sec)
+2025-11-05 00:40:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9998 ms to send records to analytics service
+2025-11-05 00:40:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:40:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:40:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:40:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:40:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 380)
+2025-11-05 00:40:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 173476 ms, Batches processed: 19
+2025-11-05 00:40:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9991 ms
+2025-11-05 00:40:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 19 batches processed, 380 records sent, TOTAL TIME: 173476 ms (173.476 sec)
+2025-11-05 00:40:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9991 ms to send records to analytics service
+2025-11-05 00:40:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:40:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:40:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:40:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:40:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 400)
+2025-11-05 00:40:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 183466 ms, Batches processed: 20
+2025-11-05 00:40:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9990 ms
+2025-11-05 00:40:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 20 batches processed, 400 records sent, TOTAL TIME: 183466 ms (183.466 sec)
+2025-11-05 00:40:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9990 ms to send records to analytics service
+2025-11-05 00:40:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:40:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:40:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:40:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:40:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 420)
+2025-11-05 00:40:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 193455 ms, Batches processed: 21
+2025-11-05 00:40:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9989 ms
+2025-11-05 00:40:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 21 batches processed, 420 records sent, TOTAL TIME: 193455 ms (193.455 sec)
+2025-11-05 00:40:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9989 ms to send records to analytics service
+2025-11-05 00:40:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:40:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:41:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:41:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:41:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 440)
+2025-11-05 00:41:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 203446 ms, Batches processed: 22
+2025-11-05 00:41:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9991 ms
+2025-11-05 00:41:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 22 batches processed, 440 records sent, TOTAL TIME: 203446 ms (203.446 sec)
+2025-11-05 00:41:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9991 ms to send records to analytics service
+2025-11-05 00:41:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:41:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:41:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:41:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:41:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 460)
+2025-11-05 00:41:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 213437 ms, Batches processed: 23
+2025-11-05 00:41:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9991 ms
+2025-11-05 00:41:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 23 batches processed, 460 records sent, TOTAL TIME: 213437 ms (213.437 sec)
+2025-11-05 00:41:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9991 ms to send records to analytics service
+2025-11-05 00:41:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:41:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:41:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:41:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:41:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 480)
+2025-11-05 00:41:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 223304 ms, Batches processed: 24
+2025-11-05 00:41:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9867 ms
+2025-11-05 00:41:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 24 batches processed, 480 records sent, TOTAL TIME: 223304 ms (223.304 sec)
+2025-11-05 00:41:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9868 ms to send records to analytics service
+2025-11-05 00:41:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:41:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:41:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:41:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:41:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 500)
+2025-11-05 00:41:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 233558 ms, Batches processed: 25
+2025-11-05 00:41:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10254 ms
+2025-11-05 00:41:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 25 batches processed, 500 records sent, TOTAL TIME: 233558 ms (233.558 sec)
+2025-11-05 00:41:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10254 ms to send records to analytics service
+2025-11-05 00:41:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:41:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:41:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:41:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:41:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 520)
+2025-11-05 00:41:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 243172 ms, Batches processed: 26
+2025-11-05 00:41:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9614 ms
+2025-11-05 00:41:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 26 batches processed, 520 records sent, TOTAL TIME: 243172 ms (243.172 sec)
+2025-11-05 00:41:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9614 ms to send records to analytics service
+2025-11-05 00:41:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:41:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:41:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:41:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:41:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 540)
+2025-11-05 00:41:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 253161 ms, Batches processed: 27
+2025-11-05 00:41:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9989 ms
+2025-11-05 00:41:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 27 batches processed, 540 records sent, TOTAL TIME: 253161 ms (253.161 sec)
+2025-11-05 00:41:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9990 ms to send records to analytics service
+2025-11-05 00:41:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:41:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:42:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:42:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:42:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 560)
+2025-11-05 00:42:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 263156 ms, Batches processed: 28
+2025-11-05 00:42:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9995 ms
+2025-11-05 00:42:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 28 batches processed, 560 records sent, TOTAL TIME: 263156 ms (263.156 sec)
+2025-11-05 00:42:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9995 ms to send records to analytics service
+2025-11-05 00:42:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:42:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:42:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:42:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:42:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 580)
+2025-11-05 00:42:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 273154 ms, Batches processed: 29
+2025-11-05 00:42:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9998 ms
+2025-11-05 00:42:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 29 batches processed, 580 records sent, TOTAL TIME: 273154 ms (273.154 sec)
+2025-11-05 00:42:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9998 ms to send records to analytics service
+2025-11-05 00:42:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:42:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:42:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:42:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:42:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 600)
+2025-11-05 00:42:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 283144 ms, Batches processed: 30
+2025-11-05 00:42:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9990 ms
+2025-11-05 00:42:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 30 batches processed, 600 records sent, TOTAL TIME: 283144 ms (283.144 sec)
+2025-11-05 00:42:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9990 ms to send records to analytics service
+2025-11-05 00:42:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:42:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:42:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:42:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:42:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 620)
+2025-11-05 00:42:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 293140 ms, Batches processed: 31
+2025-11-05 00:42:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9996 ms
+2025-11-05 00:42:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 31 batches processed, 620 records sent, TOTAL TIME: 293140 ms (293.14 sec)
+2025-11-05 00:42:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9996 ms to send records to analytics service
+2025-11-05 00:42:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:42:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:42:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:42:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:42:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 640)
+2025-11-05 00:42:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 303156 ms, Batches processed: 32
+2025-11-05 00:42:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10016 ms
+2025-11-05 00:42:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 32 batches processed, 640 records sent, TOTAL TIME: 303156 ms (303.156 sec)
+2025-11-05 00:42:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10016 ms to send records to analytics service
+2025-11-05 00:42:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:42:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:42:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:42:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:42:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 660)
+2025-11-05 00:42:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 313159 ms, Batches processed: 33
+2025-11-05 00:42:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10003 ms
+2025-11-05 00:42:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 33 batches processed, 660 records sent, TOTAL TIME: 313159 ms (313.159 sec)
+2025-11-05 00:42:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10004 ms to send records to analytics service
+2025-11-05 00:42:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:42:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:43:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:43:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:43:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 680)
+2025-11-05 00:43:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 323156 ms, Batches processed: 34
+2025-11-05 00:43:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9997 ms
+2025-11-05 00:43:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 34 batches processed, 680 records sent, TOTAL TIME: 323156 ms (323.156 sec)
+2025-11-05 00:43:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10000 ms to send records to analytics service
+2025-11-05 00:43:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:43:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:43:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:43:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:43:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 700)
+2025-11-05 00:43:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 333095 ms, Batches processed: 35
+2025-11-05 00:43:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9939 ms
+2025-11-05 00:43:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 35 batches processed, 700 records sent, TOTAL TIME: 333095 ms (333.095 sec)
+2025-11-05 00:43:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9939 ms to send records to analytics service
+2025-11-05 00:43:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:43:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:43:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:43:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:43:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 720)
+2025-11-05 00:43:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 343161 ms, Batches processed: 36
+2025-11-05 00:43:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10066 ms
+2025-11-05 00:43:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 36 batches processed, 720 records sent, TOTAL TIME: 343161 ms (343.161 sec)
+2025-11-05 00:43:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10066 ms to send records to analytics service
+2025-11-05 00:43:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:43:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:43:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:43:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:43:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 740)
+2025-11-05 00:43:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 353065 ms, Batches processed: 37
+2025-11-05 00:43:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9904 ms
+2025-11-05 00:43:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 37 batches processed, 740 records sent, TOTAL TIME: 353065 ms (353.065 sec)
+2025-11-05 00:43:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9905 ms to send records to analytics service
+2025-11-05 00:43:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:43:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:43:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:43:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:43:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 760)
+2025-11-05 00:43:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 363078 ms, Batches processed: 38
+2025-11-05 00:43:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10013 ms
+2025-11-05 00:43:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 38 batches processed, 760 records sent, TOTAL TIME: 363078 ms (363.078 sec)
+2025-11-05 00:43:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10013 ms to send records to analytics service
+2025-11-05 00:43:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:43:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:43:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:43:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:43:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 780)
+2025-11-05 00:43:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 373066 ms, Batches processed: 39
+2025-11-05 00:43:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9988 ms
+2025-11-05 00:43:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 39 batches processed, 780 records sent, TOTAL TIME: 373066 ms (373.066 sec)
+2025-11-05 00:43:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9988 ms to send records to analytics service
+2025-11-05 00:43:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:43:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:44:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:44:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:44:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 800)
+2025-11-05 00:44:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 382936 ms, Batches processed: 40
+2025-11-05 00:44:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9870 ms
+2025-11-05 00:44:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 40 batches processed, 800 records sent, TOTAL TIME: 382936 ms (382.936 sec)
+2025-11-05 00:44:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9871 ms to send records to analytics service
+2025-11-05 00:44:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:44:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:44:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:44:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:44:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 820)
+2025-11-05 00:44:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 392922 ms, Batches processed: 41
+2025-11-05 00:44:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9986 ms
+2025-11-05 00:44:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 41 batches processed, 820 records sent, TOTAL TIME: 392922 ms (392.922 sec)
+2025-11-05 00:44:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9986 ms to send records to analytics service
+2025-11-05 00:44:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:44:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:44:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:44:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:44:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 840)
+2025-11-05 00:44:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 402888 ms, Batches processed: 42
+2025-11-05 00:44:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9966 ms
+2025-11-05 00:44:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 42 batches processed, 840 records sent, TOTAL TIME: 402888 ms (402.888 sec)
+2025-11-05 00:44:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9966 ms to send records to analytics service
+2025-11-05 00:44:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:44:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:44:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:44:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:44:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 860)
+2025-11-05 00:44:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 412877 ms, Batches processed: 43
+2025-11-05 00:44:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9989 ms
+2025-11-05 00:44:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 43 batches processed, 860 records sent, TOTAL TIME: 412877 ms (412.877 sec)
+2025-11-05 00:44:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9989 ms to send records to analytics service
+2025-11-05 00:44:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:44:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:44:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:44:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:44:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 880)
+2025-11-05 00:44:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 422876 ms, Batches processed: 44
+2025-11-05 00:44:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9999 ms
+2025-11-05 00:44:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 44 batches processed, 880 records sent, TOTAL TIME: 422876 ms (422.876 sec)
+2025-11-05 00:44:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10000 ms to send records to analytics service
+2025-11-05 00:44:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:44:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:44:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:44:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:44:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 900)
+2025-11-05 00:44:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 432855 ms, Batches processed: 45
+2025-11-05 00:44:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9979 ms
+2025-11-05 00:44:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 45 batches processed, 900 records sent, TOTAL TIME: 432855 ms (432.855 sec)
+2025-11-05 00:44:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9979 ms to send records to analytics service
+2025-11-05 00:44:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:44:51 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:45:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:45:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:45:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 920)
+2025-11-05 00:45:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 442838 ms, Batches processed: 46
+2025-11-05 00:45:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9983 ms
+2025-11-05 00:45:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 46 batches processed, 920 records sent, TOTAL TIME: 442838 ms (442.838 sec)
+2025-11-05 00:45:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9984 ms to send records to analytics service
+2025-11-05 00:45:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:45:01 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:45:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:45:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:45:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 940)
+2025-11-05 00:45:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 452857 ms, Batches processed: 47
+2025-11-05 00:45:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10019 ms
+2025-11-05 00:45:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 47 batches processed, 940 records sent, TOTAL TIME: 452857 ms (452.857 sec)
+2025-11-05 00:45:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10019 ms to send records to analytics service
+2025-11-05 00:45:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:45:11 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:45:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:45:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:45:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 960)
+2025-11-05 00:45:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 462862 ms, Batches processed: 48
+2025-11-05 00:45:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 10005 ms
+2025-11-05 00:45:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 48 batches processed, 960 records sent, TOTAL TIME: 462862 ms (462.862 sec)
+2025-11-05 00:45:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 10005 ms to send records to analytics service
+2025-11-05 00:45:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 20 records from RabbitMQ
+2025-11-05 00:45:21 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 20 records to Analytics...
+2025-11-05 00:45:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 20 records to Analytics API
+2025-11-05 00:45:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 20 records to Analytics (API ingested: 20)
+2025-11-05 00:45:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 20 records to Analytics (Total sent: 980)
+2025-11-05 00:45:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 472860 ms, Batches processed: 49
+2025-11-05 00:45:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 20 records in 9998 ms
+2025-11-05 00:45:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 49 batches processed, 980 records sent, TOTAL TIME: 472860 ms (472.86 sec)
+2025-11-05 00:45:31 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 9999 ms to send records to analytics service
+2025-11-05 00:45:32 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Received batch of 16 records from RabbitMQ
+2025-11-05 00:45:32 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Waiting for permission to send 16 records to Analytics...
+2025-11-05 00:45:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Rate limiter: Permission granted! Sending 16 records to Analytics API
+2025-11-05 00:45:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.AnalyticsService - Successfully sent 16 records to Analytics (API ingested: 16)
+2025-11-05 00:45:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Successfully sent sub-batch of 16 records to Analytics (Total sent: 996)
+2025-11-05 00:45:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.service.MetricsService - [METRICS] Total batch processing time: 481827 ms, Batches processed: 50
+2025-11-05 00:45:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer - Completed processing batch of 16 records in 8967 ms
+2025-11-05 00:45:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.consumer.AnalyticsConsumer -  ANALYTICS TOTAL: 50 batches processed, 996 records sent, TOTAL TIME: 481827 ms (481.827 sec)
+2025-11-05 00:45:41 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.a.L.aspect.ExecutionTimeAspect - [Timing] AnalyticsConsumer#consumeBatch took 8968 ms to send records to analytics service
