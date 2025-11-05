@@ -1,4 +1,0 @@
-future
-
-send records to dlq that failed to be sent to ingestion ms even after retries
-validation better
