@@ -281,9 +281,11 @@ mvn clean install
 cd LogProcessor
 mvn spring-boot:run
 
-# Or using the JAR
-mvn clean package
-java -jar target/LogProcessor-0.0.1-SNAPSHOT.jar
+OR
+
+1. Load the application in Intellij IDEA 
+2. Right click on pom.xml -> Maven -> Sync Project
+3. go to LogProcessorApplication.java , right click on Run ..main()
 ```
 
 ### Step 3: Run CLI to Ingest Data
@@ -293,7 +295,7 @@ java -jar target/LogProcessor-0.0.1-SNAPSHOT.jar
 source .venv/bin/activate
 
 # Ingest CSV data
-python main.py --file ./data/sample.csv --batch-size 200
+python main.py --file example_data_2.csv 
 ```
 
 ### Step 4: Monitor Progress
